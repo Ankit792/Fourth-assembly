@@ -1,0 +1,24 @@
+.include"m32def.inc" 
+LDI R16,0X08 
+SBI DDRD,3  
+LDI R17,0 
+OUT PORTB,R17 
+
+Begin:RCALL DELAY 
+	  EOR R17,R16  
+	  OUT PORTB,R17  
+	  RJMP BEGIN 
+
+Delay:LDI R20,0XCE 
+	  OUT TCNT0,R20 
+	  LDI R20,0X01 
+	  OUT TCCR0,R20
+	    
+Again:IN R20,TIFR  
+	  SBRS R20,TOV0  
+	  RJMP AGAIN 
+	  LDI R20,0X00 
+	  OUT TCCR0,R20  
+	  LDI R20,(1<<TOV0) 
+	  OUT TIFR,R20  
+	  RET 

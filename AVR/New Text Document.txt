@@ -1,0 +1,84 @@
+3. Ten 8 bit values are stored at data memory starting from 0x0060H onwards. Write an AVR assembly program to add these ten values and store the result at 0x006AH.
+
+4. Write an assembly program to count number of positive, negative and zero’s 
+from given ten 8 bit values stored at any location in Atmega32.
+
+5. In superstore, for washing machine bar code is A3H and for 
+television barcode is B3H. End of barcode data is indicated by 00H.
+Write an assembly program to count total number of washing machine and television from the series of barcode entered at location 0060H and store the count of washing 
+machine at 0090H and count of television at 0091H using AVR instruction set.
+
+6. Write an AVR assembly level program to compute the following for ten 8-bit numbers. Store the result in memory..
+1. Find average of numbers.
+2. Find Maximum of number
+3. Find Smallest number
+
+7. A set of 10 temperature readings are stored at location 0060H. Write an AVR program which rejects negative readings and adds all positive readings and store summation at 0070H (Lower Byte) & 0071H (Higher Byte).
+
+8. Write an assembly language program to separate even numbers from the given 
+list of 20 numbers and store them in the another list starting from 0090H. 
+Assume starting address of 20 number list is 0060H.
+
+
+9. Set of 10 data bytes are stored at 0060H. End of the data is indicated by FFH. Write a program that check each data byte and transfers only those data byte that 
+are less than 0x60 and greater than 0x20 to a new memory location starting from 0090H.
+
+10. Write a program to generate the Fibonacci sequence numbers. 
+Generate 14 numbers of sequences and store it in memory
+
+11. A string in lower case is stored at location 0060H onwards. The end of string is given by 0x00. Write a program to convert string into upper case and store at location 0090H onwards.
+Note: Use input string as follow:
+yourname middlename surname
+
+12. The following string is stored at memory location starting from 0060H
+"THE QUICK BROWN FOX JUMPS OVER LAZY DOG."
+The String is stored in the ASCII format and is terminated with 00H. 
+Write a program to count number of words and spaces in the given string. 
+Store the count of words and space at location 0090H and 0091H.
+
+13. The following string is stored at memory location starting from 0060H
+"the quick brown fox jumps over lazy dog.“
+(ASCII value of a = 61)
+The String is stored in the ASCII format and is terminated with 00H. 
+Write a program to count the occurrences of each character and store the result at location 0100 H onwards.
+
+15. Write an assembly program to blink LED’s connected on PORTD 0 to PORTD 
+7 and reset them in reverse manner. 
+Simulate program in AVR studio and demonstrate in Proteus.
+
+16. Write an AVR assembly language program to generate
+square wave on pin PC0 of
+a) 50% duty cycle if status of PC1 is 1
+b) 75% duty cycle if status of PC1 is 0
+ 
+17. Write a program to perform the following.
+Keep monitoring bit 2 of PORTA until it becomes high.
+When it becomes high write value 45H on PORTD and 
+Sent a high to low pulse to PA3.
+
+18. A switch
+is connected on PA0. WAP to read status of the switch and if 
+switch reads a value ‘0’ implement MOD 10 up counter
+on PORTB else implement 4 bit down counter on PORTB.
+
+19. Write an assembly code to display "HI" on 16x2 LCD interfaced with 
+Atmega32. Demonstrate the code on Proteus Simulation.
+
+20. Write a program to
+1. Monitor status of switch. If it reads a ‘0’ value display “microcontroller” on LCD else display “Electronics” on LCD
+2. Display “microcontroller and Interfacing” on LCD. Use both the rows of LCD.
+Simulate program in Proteus and demonstrate on development kit.
+
+21. Write a program to display SCET and EC on 7 segment LED.(anode configuration).If the switch =1 
+then display SCET and if switch=0 display EC.
+
+22. Write a program to send “HI” from Atmega32 to PC using Serial Communication.
+Simulate program in Proteus.
+
+23. Write an AVR assembly language program to generate square wave on pin PC0 of
+a) 50% duty cycle if status of PC1 is 1
+b) 75% duty cycle if status of PC1 is 0Use concept of timer to generate delay.
+
+24. Write an AVR assembly program to generate square wave with a period of
+12.5microsecond on Port B.3 bit using Timer0 in normal mode. Assume
+crystal frequency = 8 MHz

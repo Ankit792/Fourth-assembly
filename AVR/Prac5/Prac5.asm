@@ -1,0 +1,23 @@
+.include"m32def.inc"
+ 		LDI R26, 0X60
+ 		LDI R27, 0X00
+ 		LDI R16, 0X00
+ 		MOV R17, R16    //NO. OF WM
+ 		MOV R18, R16    //NO. OF TV
+
+REPEAT: LD R16, X+
+ 		CPI R16, 0X00
+ 		BREQ END
+ 		CPI R16, 0XB3
+ 		BREQ WM
+ 		CPI R16, 0XA3
+ 		BREQ TV
+ 		JMP REPEAT
+
+WM: 	INC R17
+ 		JMP REPEAT
+
+TV: 	INC R18
+ 		JMP REPEAT
+
+END: 	JMP END

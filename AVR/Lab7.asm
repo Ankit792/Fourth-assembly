@@ -1,0 +1,21 @@
+.include"m32def.inc"
+LDI R26,0X60
+LDI R27,0X00
+LDI R16,0X00
+LDI R17,0X00
+LDI R20,0X0A
+
+REPEAT: LD R16,X+
+        CPI R16,0X00
+        BREQ POSITIVE
+        CPI R16,0X80
+        BRSH NEGATIVE
+
+POSITIVE: ADD R17,R16
+          DEC R20
+          JMP REPEAT
+
+NEGATIVE: DEC R20
+          BRNE REPEAT
+
+END:      JMP END       
